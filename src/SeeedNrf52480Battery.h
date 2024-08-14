@@ -16,7 +16,6 @@ class SeeedNrf52480Battery {
         SeeedNrf52480Battery(bool disableVoltageReading = false, bool useP0_31 = false);
 
         bool isCharging();
-        unsigned long currentChargeStateSinceMs();
         void setChargeCurrent100mA();
         void setChargeCurrent50mA();
         

@@ -34,11 +34,6 @@ void SeeedNrf52480Battery::enableVoltageReading(){
     digitalWrite(PIN_VBAT_ENABLE, LOW); // VBAT read enable
 }
 
-void SeeedNrf52480Battery::chargingInterrupt()
-{
-    this->lastChargingPeak = millis();
-}
-
 void SeeedNrf52480Battery::disableVoltageReading()
 {
     //currently not implented, because I'm unsure my idea is the proper way
