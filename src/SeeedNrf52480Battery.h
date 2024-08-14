@@ -16,7 +16,7 @@ class SeeedNrf52480Battery {
         SeeedNrf52480Battery(bool disableVoltageReading = false, bool useP0_31 = false);
 
         bool isCharging();
-        int currentChargeStateSinceMs();
+        unsigned long currentChargeStateSinceMs();
         void setChargeCurrent100mA();
         void setChargeCurrent50mA();
         
@@ -27,7 +27,7 @@ class SeeedNrf52480Battery {
         float getPercentage();
         void setVoltageDividerRatio(float voltageDividerRatio);
         float getVoltageDividerRatio();
-        int updateVoltageReading();
+        int updateADCReading();
 
     private:
 
@@ -49,7 +49,7 @@ class SeeedNrf52480Battery {
         uint8_t adcSampleSize = 10;
 
         //disable ADC and voltage pin
-        bool disableVoltageReading;
+        bool voltageReadingDisabled = false;
 
         //pin used to read input voltage
         uint8_t adcInputPin = PIN_VBAT;
@@ -62,9 +62,6 @@ class SeeedNrf52480Battery {
 
         //refernce voltage setting of ADC
         uint8_t adcReferenceMode = AR_INTERNAL2V4;
-
-        //time stamp for less flickery charing dection
-        unsigned long lastChargingPeak = millis();
 };
 
 #endif

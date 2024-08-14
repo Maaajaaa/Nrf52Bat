@@ -13,7 +13,6 @@ SeeedNrf52480Battery	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 isCharging                  KEYWORD2
-currentChargeStateSinceMs   KEYWORD2
 setChargeCurrent100mA       KEYWORD2
 setChargeCurrent50mA        KEYWORD2
         
