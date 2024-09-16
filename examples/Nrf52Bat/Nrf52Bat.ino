@@ -1,6 +1,6 @@
-#include <SeeedNrf52480Battery.h>
+#include <Nrf52Bat.h>
 
-SeeedNrf52480Battery battery = SeeedNrf52480Battery();
+Nrf52Bat battery = Nrf52Bat();
 unsigned long lastChange = 0;
 
 void setup() {

@@ -10,10 +10,10 @@
 
 #include <Arduino.h>
 
-class SeeedNrf52480Battery {
+class Nrf52Bat {
     public:
 
-        SeeedNrf52480Battery(bool disableVoltageReading = false, bool useP0_31 = false);
+        Nrf52Bat(bool disableVoltageReading = false, bool useP0_31 = false);
 
         bool isCharging();
         void setChargeCurrent100mA();
@@ -27,6 +27,8 @@ class SeeedNrf52480Battery {
         void setVoltageDividerRatio(float voltageDividerRatio);
         float getVoltageDividerRatio();
         int updateADCReading();
+        void setMaxVoltage(float maxVolts);
+        void setMinVoltage(float minVolts);
 
     private:
 
