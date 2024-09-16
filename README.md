@@ -42,6 +42,7 @@ battery.setMinVoltage(3.1)
 //set the voltage that will be considered 100% to 4.3V, note: the battery charge IC (BQ25101) will charge the battery up to 4.2V (typ)
 battery.setMaxVoltage(4.3);
 //
+```
 
 ### See
 For a complete Example, see examples/Nrf52Bat.ino
