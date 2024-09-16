@@ -10,10 +10,10 @@
 
 #include <Arduino.h>
 
-class Nrf52Bat {
+class SeeedNrf52480Battery {
     public:
 
-        Nrf52Bat(bool disableVoltageReading = false, bool useP0_31 = false);
+        SeeedNrf52480Battery(bool disableVoltageReading = false, bool useP0_31 = false);
 
         bool isCharging();
         void setChargeCurrent100mA();
