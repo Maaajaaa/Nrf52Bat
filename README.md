@@ -44,6 +44,6 @@ battery.setMaxVoltage(4.3);
 //
 ```
 
-### See
+### See more
 For a complete Example, see examples/Nrf52Bat.ino
 
